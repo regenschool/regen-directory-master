@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { StudentCard } from "@/components/StudentCard";
+import { ExportStudentsCSV } from "@/components/ExportStudentsCSV";
 import { Sprout, Download, ArrowUpDown, Trash2, UserMinus, UserX, RefreshCw, ChevronLeft, ChevronRight } from "lucide-react";
 import { toast } from "sonner";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -404,6 +405,7 @@ const Directory = () => {
             <Download className="w-4 h-4 mr-2" />
             {t("directory.exportCSV")}
           </Button>
+          <ExportStudentsCSV />
           <Suspense fallback={<Button variant="outline" disabled>Chargement...</Button>}>
             <ImportStudentsDialog 
               onImportComplete={() => refetch()} 
