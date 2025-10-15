@@ -202,6 +202,7 @@ const Directory = () => {
       "Parcours académique",
       "Entreprise",
       "Classe",
+      "Photo URL",
     ];
 
     const csvData = filteredEnrollments.map((enrollment) => [
@@ -211,6 +212,7 @@ const Directory = () => {
       enrollment.academic_background || "",
       enrollment.company || "",
       enrollment.class_name_from_ref || enrollment.class_name || '',
+      enrollment.photo_url || "",
     ]);
 
     const csvContent = [
